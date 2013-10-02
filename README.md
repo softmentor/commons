@@ -1,4 +1,4 @@
 common-validator-constraints
 ============================
 
-Simple library which holds common javax validator constraints
+Common everyday libraries that we require while building larger sub-systems.
