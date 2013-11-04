@@ -16,6 +16,8 @@ import org.junit.Test;
 
 import com.fasterxml.jackson.annotation.JsonProperty;
 import com.google.common.io.Resources;
+import com.softmentor.common.configuration.exception.ConfigurationParsingException;
+import com.softmentor.common.configuration.exception.ConfigurationValidationException;
 import com.softmentor.common.util.jackson.Jackson;
 
 

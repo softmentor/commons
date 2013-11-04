@@ -28,6 +28,11 @@ import com.fasterxml.jackson.dataformat.yaml.YAMLFactory;
 import com.fasterxml.jackson.dataformat.yaml.snakeyaml.error.MarkedYAMLException;
 import com.fasterxml.jackson.dataformat.yaml.snakeyaml.error.YAMLException;
 import com.google.common.base.Splitter;
+import com.softmentor.common.configuration.exception.ConfigurationException;
+import com.softmentor.common.configuration.exception.ConfigurationParsingException;
+import com.softmentor.common.configuration.exception.ConfigurationValidationException;
+import com.softmentor.common.configuration.source.ConfigurationSource;
+import com.softmentor.common.configuration.source.FileConfigurationSource;
 
 
 /**
@@ -80,7 +85,7 @@ public class ConfigurationFactory<T>
      * @throws ConfigurationException
      *             if there is an error parsing or validating the file
      */
-    public T build(ConfigurationSourceProvider provider, String path) throws IOException, ConfigurationException
+    public T build(ConfigurationSource provider, String path) throws IOException, ConfigurationException
     {
         try (InputStream input = provider.open(checkNotNull(path)))
         {
@@ -116,7 +121,7 @@ public class ConfigurationFactory<T>
      */
     public T build(File file) throws IOException, ConfigurationException
     {
-        return build(new FileConfigurationSourceProvider(), file.toString());
+        return build(new FileConfigurationSource(), file.toString());
     }
 
     /**

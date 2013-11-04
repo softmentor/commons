@@ -1,21 +1,21 @@
 package com.softmentor.common.configuration;
 
-import com.google.common.base.Charsets;
-import com.google.common.io.ByteStreams;
-import com.google.common.io.Resources;
-import com.softmentor.common.configuration.ConfigurationSourceProvider;
-import com.softmentor.common.configuration.FileConfigurationSourceProvider;
-
-import org.junit.Test;
+import static org.fest.assertions.api.Assertions.assertThat;
 
 import java.io.InputStream;
 
-import static org.fest.assertions.api.Assertions.assertThat;
+import org.junit.Test;
+
+import com.google.common.base.Charsets;
+import com.google.common.io.ByteStreams;
+import com.google.common.io.Resources;
+import com.softmentor.common.configuration.source.ConfigurationSource;
+import com.softmentor.common.configuration.source.FileConfigurationSource;
 
 
 public class FileConfigurationSourceProviderTest
 {
-    private final ConfigurationSourceProvider provider = new FileConfigurationSourceProvider();
+    private final ConfigurationSource provider = new FileConfigurationSource();
 
     @Test
     public void readsFileContents() throws Exception

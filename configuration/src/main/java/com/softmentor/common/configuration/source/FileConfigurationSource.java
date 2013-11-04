@@ -1,12 +1,12 @@
-package com.softmentor.common.configuration;
+package com.softmentor.common.configuration.source;
 
 import java.io.*;
 
 
 /**
- * An implementation of {@link ConfigurationSourceProvider} that reads the configuration from the local file system.
+ * An implementation of {@link ConfigurationSource} that reads the configuration from the local file system.
  */
-public class FileConfigurationSourceProvider implements ConfigurationSourceProvider
+public class FileConfigurationSource implements ConfigurationSource
 {
     @Override
     public InputStream open(String path) throws IOException

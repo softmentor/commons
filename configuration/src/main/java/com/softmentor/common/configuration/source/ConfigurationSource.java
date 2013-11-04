@@ -1,4 +1,4 @@
-package com.softmentor.common.configuration;
+package com.softmentor.common.configuration.source;
 
 import java.io.IOException;
 import java.io.InputStream;
@@ -7,7 +7,7 @@ import java.io.InputStream;
 /**
  * An interface for objects that can create an {@link InputStream} to represent the application configuration.
  */
-public interface ConfigurationSourceProvider
+public interface ConfigurationSource
 {
     /**
      * Returns an {@link InputStream} that contains the source of the configuration for the application. The caller is

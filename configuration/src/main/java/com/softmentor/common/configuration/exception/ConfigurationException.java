@@ -1,4 +1,4 @@
-package com.softmentor.common.configuration;
+package com.softmentor.common.configuration.exception;
 
 import java.util.Collection;
 

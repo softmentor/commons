@@ -1,21 +1,21 @@
 package com.softmentor.common.configuration;
 
-import org.junit.Before;
-import org.junit.Test;
+import static org.fest.assertions.api.Assertions.assertThat;
+import static org.hamcrest.CoreMatchers.is;
+import static org.junit.Assume.assumeThat;
 
-import com.softmentor.common.configuration.ConfigurationValidationException;
+import java.util.Locale;
+import java.util.Set;
 
 import javax.validation.ConstraintViolation;
 import javax.validation.Validation;
 import javax.validation.Validator;
 import javax.validation.constraints.NotNull;
 
-import java.util.Locale;
-import java.util.Set;
+import org.junit.Before;
+import org.junit.Test;
 
-import static org.fest.assertions.api.Assertions.assertThat;
-import static org.hamcrest.CoreMatchers.is;
-import static org.junit.Assume.assumeThat;
+import com.softmentor.common.configuration.exception.ConfigurationValidationException;
 
 
 public class ConfigurationValidationExceptionTest
